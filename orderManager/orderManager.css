@@ -1,0 +1,99 @@
+body {
+  background-color: rgb(233, 225, 208);
+}
+.title {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+.title:hover {
+  color: orange;
+}
+.manager {
+  padding-top: 30px;
+}
+.btn_home:hover {
+  color: orange;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+table,
+tr,
+th {
+  border-radius: 10px;
+  border: 2px solid black;
+}
+th {
+  background-color: orange;
+}
+
+tr,
+th,
+td {
+  padding: 10px;
+}
+table td {
+  text-align: center;
+  background-color: rgba(207, 207, 207, 0.593);
+}
+.btn_add {
+  width: auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+}
+.btn_add:hover {
+  background-color: rgb(120, 80, 7);
+}
+.btn_page {
+  padding: 10px;
+  background-color: rgb(235, 199, 131);
+  border-radius: 20px;
+}
+.btn_page:hover {
+  background-color: rgb(178, 120, 11);
+  color: white;
+}
+.btn_page2 {
+  padding: 10px;
+  background-color: rgb(180, 118, 3);
+  border-radius: 20px;
+  color: white;
+}
+.btn_page2:hover {
+  background-color: rgb(85, 56, 2);
+}
+.access {
+  width: auto;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+}
+.access:hover {
+  background-color: rgb(2, 81, 2);
+}
+.showHistory {
+  width: auto;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
+}
+.showHistory:hover {
+  background-color: rgb(84, 0, 0);
+}
+.search {
+  border: none;
+  background: none;
+  padding-left: 20px;
+}
+.search:hover {
+  color: orange;
+}

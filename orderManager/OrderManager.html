@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Manager</title>
+    <link rel="shortcut icon" href="/image/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="orderManager.css" />
+  </head>
+  <body>
+    <div>
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          padding-top: 50px;
+          margin-bottom: 50px;
+        "
+      >
+        <a href="/home/Home.html"
+          ><button
+            class="btn_home"
+            style="border: none; background: none; font-size: 20px"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-box-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+              />
+            </svg>
+            Quay lại trang chủ
+          </button></a
+        >
+        <button class="btn_page2">Xuất mã đơn hàng</button>
+      </div>
+      <div class="manager">
+        <h1 class="title">Quản lí đơn hàng</h1>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          margin-bottom: 30px;
+        "
+      >
+        <input
+          style="
+            width: 300px;
+            height: 30px;
+            border-radius: 20px;
+            padding: 0 10px;
+          "
+          type="text"
+          placeholder="Tìm kiếm theo số điện thoại..."
+        />
+        <input
+          style="
+            width: 300px;
+            height: 30px;
+            border-radius: 20px;
+            padding: 0 10px;
+          "
+          type="text"
+          placeholder="Tìm kiếm theo mã đơn hàng..."
+        />
+
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <select
+            name=""
+            id=""
+            style="
+              height: 30px;
+              padding: 5px;
+              border-radius: 20px;
+              border: 2px solid black;
+            "
+          >
+            <option value="">Tất cả</option>
+            <option value="">Đơn hàng mới</option>
+            <option value="">Lưu kho</option>
+            <option value="">Giao hàng thành công</option>
+            <option value="">Giao hàng thất bại</option>
+            <option value="">Hoàn hàng</option>
+          </select>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-left: 5px;
+          "
+        >
+          <select
+            name=""
+            id=""
+            style="
+              height: 30px;
+              padding: 5px;
+              border-radius: 20px;
+              border: 2px solid black;
+            "
+          >
+            <option value="">Tất cả</option>
+            <option value="">Nhà cung cấp A</option>
+            <option value="">Nhà cung cấp B</option>
+            <option value="">Nhà cung cấp C</option>
+            <option value="">Nhà cung cấp D</option>
+          </select>
+        </div>
+        <button class="search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Mã đơn hàng</th>
+              <th>Ngày tạo</th>
+              <th>Trạng thái</th>
+              <th>Mã kho</th>
+              <th>Tên NCC</th>
+              <th>Số điện thoại NCC</th>
+              <th>Tên Người nhận</th>
+              <th>Số điện thoại Người nhận</th>
+              <th>Thao tác</th>
+              <th>Chọn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>DH-230712-00001</td>
+              <td>12/07/2023</td>
+              <td>Đơn hàng mới</td>
+              <td>K-TTT</td>
+              <td>Nhà cung cấp A</td>
+              <td>0908300703</td>
+              <td>Nguyễn văn B</td>
+              <td>098888888</td>
+              <td>
+                <a href="/orderManager/OrderDetail.html"
+                  ><button class="btn_add">Xem chi tiết</button></a
+                >
+              </td>
+              <td><input type="checkbox" name="" id="" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          margin-top: 20px;
+        "
+      >
+        <button class="btn_page">1</button>
+        <button class="btn_page">2</button>
+        <button class="btn_page">3</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Detail</title>
+    <link rel="shortcut icon" href="/image/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="orderManager.css" />
+  </head>
+  <body>
+    <div>
+      <div class="manager">
+        <div
+          style="
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 70px;
+          "
+        >
+          <a href="/orderManager/OrderManager.html"
+            ><button
+              class="btn_home"
+              style="border: none; background: none; font-size: 20px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+                />
+              </svg>
+              Quay lại
+            </button></a
+          >
+          <button class="btn_add">Xác nhận giao hàng</button>
+        </div>
+        <h1 class="title">Chi tiết đơn hàng</h1>
+      </div>
+      <div style="display: flex; justify-content: center; margin-bottom: 20px">
+        <table>
+          <tr>
+            <th
+              style="background-color: rgb(144, 101, 22); color: white"
+              colspan="2"
+            >
+              Đơn hàng
+            </th>
+          </tr>
+          <tr>
+            <th>Mã đơn hàng</th>
+            <td>DH-230713-00001</td>
+          </tr>
+          <tr>
+            <th>Ngày tạo đơn</th>
+            <td>13-07-2023</td>
+          </tr>
+          <tr>
+            <th>Trạng thái đơn</th>
+            <td>Đơn hàng mới</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 50px;
+        "
+      >
+        <table style="width: 450px">
+          <tr>
+            <th
+              style="background-color: rgb(144, 101, 22); color: white"
+              colspan="2"
+            >
+              Kho hàng
+            </th>
+          </tr>
+          <tr>
+            <th>Mã kho</th>
+            <td>K-TTT</td>
+          </tr>
+          <tr>
+            <th>Tên kho</th>
+            <td>Kho Tôn Thất Thuyết</td>
+          </tr>
+          <tr>
+            <th>Địa chỉ kho</th>
+            <td>
+              Số 7 Tôn Thất Thuyết, Gần Tòa Án Nhân Dân quận Cầu Giấy, Hà Nội
+            </td>
+          </tr>
+          <tr>
+            <th>Ngày lưu kho</th>
+            <td>13-07-2023</td>
+          </tr>
+        </table>
+        <table style="width: 450px">
+          <tr>
+            <th
+              style="background-color: rgb(144, 101, 22); color: white"
+              colspan="2"
+            >
+              Nhà cung cấp
+            </th>
+          </tr>
+          <tr>
+            <th>Tên NCC</th>
+            <td>NHÀ CUNG CẤP A</td>
+          </tr>
+          <tr>
+            <th>Địa chỉ NCC</th>
+            <td>
+              Số 7 Tôn Thất Thuyết, Gần Tòa Án Nhân Dân quận Cầu Giấy, Hà Nội
+            </td>
+          </tr>
+          <tr>
+            <th>Số điện thoại</th>
+            <td>098888888</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>ncca@gmail.com</td>
+          </tr>
+        </table>
+        <table style="width: 450px">
+          <tr>
+            <th
+              style="background-color: rgb(144, 101, 22); color: white"
+              colspan="2"
+            >
+              Người nhận
+            </th>
+          </tr>
+          <tr>
+            <th>Tên người nhận</th>
+            <td>Nguyễn Văn B</td>
+          </tr>
+          <tr>
+            <th>Địa chỉ nhận</th>
+            <td>
+              Số 7 Tôn Thất Thuyết, Gần Tòa Án Nhân Dân quận Cầu Giấy, Hà Nội
+            </td>
+          </tr>
+          <tr>
+            <th>Số điện thoại</th>
+            <td>098888888</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>nvb@gmail.com</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 100px;
+        "
+      >
+        <table>
+          <thead>
+            <tr>
+              <th
+                style="background-color: rgb(144, 101, 22); color: white"
+                colspan="4"
+              >
+                Lịch sử đơn hàng
+              </th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th>Thời gian</th>
+              <th>Trạng thái đơn hàng</th>
+              <th>Lý do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>13-07-2023</td>
+            <td>Đơn hàng mới</td>
+            <td style="width: 300px"></td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

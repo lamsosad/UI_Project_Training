@@ -1,0 +1,154 @@
+body {
+  background-color: rgb(233, 225, 208);
+}
+.title {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+.title:hover {
+  color: orange;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://png.pngtree.com/background/20230527/original/pngtree-warehouse-with-wooden-pallets-in-the-warehouse-picture-image_2764807.jpg")
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.login-btn:hover {
+  background-color: orange;
+}
+.login-title:hover {
+  color: orange;
+}
+.form-box {
+  position: relative;
+  width: 400px;
+  height: auto;
+  background: rgba(34, 34, 34, 0.632);
+  border: 2px solid rgba(49, 49, 49, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+h2 {
+  font-size: 2em;
+  color: orange;
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #000000;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #000000;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #000000;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #000000;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forget {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+.forget label a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.forget label a:hover {
+  text-decoration: underline;
+}
+
+.register {
+  font-size: 0.9em;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+.btn_add {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: orange;
+  font-size: 20px;
+}
+.btn_add:hover {
+  background-color: rgb(120, 80, 7);
+  color: white;
+}
+.btn_home:hover {
+  color: orange;
+}
+.select_warehouse {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1em;
+}
