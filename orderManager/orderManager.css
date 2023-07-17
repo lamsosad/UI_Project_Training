@@ -97,3 +97,29 @@ table td {
 .search:hover {
   color: orange;
 }
+#reason {
+  height: 30px;
+  border-radius: 20px;
+  background: white;
+  padding: 5px;
+}
+.btn_day {
+  height: 30px;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+}
+.btn_day:hover {
+  background-color: rgb(2, 84, 2);
+}
+.btn_month {
+  height: 30px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+}
+.btn_month:hover {
+  background-color: rgb(134, 1, 1);
+}

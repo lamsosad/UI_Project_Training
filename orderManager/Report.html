@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Status</title>
+    <link rel="shortcut icon" href="/image/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="orderManager.css" />
+  </head>
+  <body>
+    <div>
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          padding-top: 50px;
+          margin-bottom: 50px;
+        "
+      >
+        <a href="/home/Home.html"
+          ><button
+            class="btn_home"
+            style="border: none; background: none; font-size: 20px"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-box-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+              />
+            </svg>
+            Quay lại trang chủ
+          </button></a
+        >
+      </div>
+      <div class="manager">
+        <h1 class="title">Báo cáo thống kê đơn hàng</h1>
+      </div>
+      <div style="display: flex; justify-content: center; gap: 20px">
+        <div>
+          <table>
+            <tr>
+              <th>Báo cáo:</th>
+              <th>Theo ngày</th>
+              <th>Theo tháng</th>
+            </tr>
+            <tr>
+              <th>Tổng số lượng đơn hàng về các kho</th>
+              <td><button class="btn_day">Xuất theo ngày</button></td>
+              <td><button class="btn_month">Xuất theo tháng</button></td>
+            </tr>
+            <tr>
+              <th>Hiệu suất giao đơn hàng</th>
+              <td><button class="btn_day">Xuất theo ngày</button></td>
+              <td><button class="btn_month">Xuất theo tháng</button></td>
+            </tr>
+          </table>
+        </div>
+        <div
+          style="border-radius: 20px; border: 2px solid black; padding: 10px"
+        >
+          <div
+            style="display: flex; justify-content: center; margin-bottom: 20px"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã Kho</th>
+                  <th>Tên Kho</th>
+                  <th>Địa chỉ</th>
+                  <th>Chọn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>K-TTH</td>
+                  <td>Kho Tôn Thất Huyết</td>
+                  <td>Số 1 Phạm Hùng</td>
+                  <td>
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-bottom: 30px">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                gap: 20px;
+              "
+            >
+              <input
+                type="date"
+                style="height: 30px; padding: 5px; border-radius: 20px"
+              />
+              đến
+              <input
+                type="date"
+                style="height: 30px; padding: 5px; border-radius: 20px"
+              />
+            </div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            "
+          >
+            <button class="btn_page">1</button>
+            <button class="btn_page">2</button>
+            <button class="btn_page">3</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
