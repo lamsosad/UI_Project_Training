@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <a href="http://localhost:8080/api/v1/product/download/excel">tải nhé</a>
+    <form id="checkboxForm">
+      <input type="checkbox" name="value" value="value1" /> Value 1<br />
+      <input type="checkbox" name="value" value="value2" /> Value 2<br />
+      <input type="checkbox" name="value" value="value3" /> Value 3<br />
+      <button type="button" onclick="getSelectedValues()">
+        Get Selected Values
+      </button>
+    </form>
+  </body>
+  <script>
+    function getSelectedValues() {
+      // Lấy dữ liệu từ form
+      var formData = $("#checkboxForm").serialize();
+
+      // Gửi Ajax request đến API
+      $.ajax({
+        url: "http://localhost:8080/api/get-selected-values",
+        type: "GET",
+        data: formData,
+        success: function (data) {
+          // Xử lý dữ liệu trả về từ API
+          console.log("Selected Values:", data);
+          // Do something with the data
+        },
+        error: function (xhr, status, error) {
+          console.error("Error:", error);
+        },
+      });
+    }
+  </script>
+</html>
