@@ -6,6 +6,8 @@
     <title>Order Status</title>
     <link rel="shortcut icon" href="/image/logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="orderManager.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./report.js"></script>
   </head>
   <body>
     <div>
@@ -46,55 +48,28 @@
       <div class="manager">
         <h1 class="title">Báo cáo thống kê đơn hàng</h1>
       </div>
-      <div style="display: flex; justify-content: center; gap: 20px">
+      <div style="display: flex; justify-content: center; gap: 20px;height: 300px;">
         <div>
           <table>
             <tr>
               <th>Báo cáo:</th>
-              <th>Theo ngày</th>
-              <th>Theo tháng</th>
+              <th>Xuất theo ngày</th>
+              <th>Xuất theo tháng</th>
             </tr>
             <tr>
               <th>Tổng số lượng đơn hàng về các kho</th>
-              <td><button class="btn_day">Xuất theo ngày</button></td>
-              <td><button class="btn_month">Xuất theo tháng</button></td>
+              <td><input type="radio" name="checked" id=""></td>
+              <td><input type="radio" name="checked" id=""></td>
             </tr>
             <tr>
               <th>Hiệu suất giao đơn hàng</th>
-              <td><button class="btn_day">Xuất theo ngày</button></td>
-              <td><button class="btn_month">Xuất theo tháng</button></td>
+              <td><input type="radio" name="checked" id=""></td>
+              <td><input type="radio" name="checked" id=""></td>
             </tr>
-          </table>
-        </div>
-        <div
-          style="border-radius: 20px; border: 2px solid black; padding: 10px"
-        >
+          </table><br>
           <div
-            style="display: flex; justify-content: center; margin-bottom: 20px"
-          >
-            <table>
-              <thead>
-                <tr>
-                  <th>STT</th>
-                  <th>Mã Kho</th>
-                  <th>Tên Kho</th>
-                  <th>Địa chỉ</th>
-                  <th>Chọn</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>K-TTH</td>
-                  <td>Kho Tôn Thất Huyết</td>
-                  <td>Số 1 Phạm Hùng</td>
-                  <td>
-                    <input type="checkbox" name="" id="" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          style="border-radius: 20px; border: 2px solid black; padding: 10px;  background-color: rgba(207, 207, 207, 0.593);"
+        >
           <div style="margin-bottom: 30px">
             <div
               style="
@@ -107,32 +82,118 @@
             >
               <input
                 type="date"
-                style="height: 30px; padding: 5px; border-radius: 20px"
+                style="
+                  height: 30px;
+                  padding: 5px;
+                  border-radius: 20px;
+                  width: 120px;
+                "
               />
               đến
               <input
                 type="date"
-                style="height: 30px; padding: 5px; border-radius: 20px"
+                style="
+                  height: 30px;
+                  padding: 5px;
+                  border-radius: 20px;
+                  width: 120px;
+                "
               />
             </div>
           </div>
-
-          <div
-            style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 5px;
-              margin-top: 20px;
-              margin-bottom: 20px;
-            "
-          >
-            <button class="btn_page">1</button>
-            <button class="btn_page">2</button>
-            <button class="btn_page">3</button>
-          </div>
+         <div style="display: flex; justify-content: center;align-items: center;padding-bottom: 10px; gap: 10px;">
+          <button class="btn_month" onclick="showWareHouse()">Chọn kho</button>
+          <button class="btn_day">Xác nhận</button>
         </div>
+        </div>
+        </div>
+        
+        <div
+          style="border-radius: 20px; border: 2px solid black; padding: 10px;height: 290px;"
+        >
+          <div
+            style="overflow: auto;max-height: 290px;display: flex; justify-content: center; margin-bottom: 20px"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã Kho</th>
+                  <th>Tên Kho</th>
+                  <th>Xóa</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr>
+                  <td>1</td>
+                  <td>K-TTH</td>
+                  <td>Kho Tôn Thất Huyết</td>
+                  <td>
+                   <button style="background: none;border: none;cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                  </svg></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
       </div>
+    </div>
+    <div
+      class="showWareHouse"
+      style="
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.697);
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 20;
+      "
+    >
+    <div>
+      <button style="background: none; border: none;padding-top: 20px;padding-left: 20px;color: white; z-index: 20; cursor: pointer;" onclick="turnOff()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+        </svg>
+      </button>
+    </div>
+    <div style="overflow: auto; max-height: 500px;display: flex;
+    justify-content: center;margin-top: 100px; padding: 10px;">
+      <table
+        style="
+       
+          background-color: antiquewhite;
+          box-shadow: 0 0 20px 10px white;
+        "
+      >
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Mã Kho</th>
+            <th>Tên Kho</th>
+            <th>Địa chỉ</th>
+            <th>
+              <button style="background: none; border: none; cursor: pointer">
+                <b>Chọn</b>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>K-TTH</td>
+            <td>Kho Tôn Thất Huyết</td>
+            <td>Số 1 Phạm Hùng</td>
+            <td>
+              <input type="checkbox" name="" id="" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
     </div>
   </body>
 </html>

@@ -1,41 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Download Excel</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <a href="http://localhost:8080/api/v1/product/download/excel">tải nhé</a>
-    <form id="checkboxForm">
-      <input type="checkbox" name="value" value="value1" /> Value 1<br />
-      <input type="checkbox" name="value" value="value2" /> Value 2<br />
-      <input type="checkbox" name="value" value="value3" /> Value 3<br />
-      <button type="button" onclick="getSelectedValues()">
-        Get Selected Values
-      </button>
-    </form>
-  </body>
-  <script>
-    function getSelectedValues() {
-      // Lấy dữ liệu từ form
-      var formData = $("#checkboxForm").serialize();
+    <button id="downloadButton" onclick="downloadExcel()">
+      Download Excel
+    </button>
 
-      // Gửi Ajax request đến API
-      $.ajax({
-        url: "http://localhost:8080/api/get-selected-values",
-        type: "GET",
-        data: formData,
-        success: function (data) {
-          // Xử lý dữ liệu trả về từ API
-          console.log("Selected Values:", data);
-          // Do something with the data
-        },
-        error: function (xhr, status, error) {
-          console.error("Error:", error);
-        },
-      });
-    }
-  </script>
+    <script>
+      // Địa chỉ URL của API bạn muốn gọi
+      const apiURL = "http://localhost:8080/api/download/excel";
+
+      // Hàm thực hiện gọi API
+      function downloadExcel() {
+        // Gọi Ajax để tải xuống tệp Excel
+        $.ajax({
+          url: apiURL,
+          method: "GET",
+          success: function (data) {
+            console.log(data);
+          },
+          error: function (error) {
+            console.error("Lỗi khi tải xuống tệp Excel:", error);
+          },
+        });
+      }
+
+      // Bắt sự kiện click của nút button và gọi hàm downloadExcel
+    </script>
+  </body>
 </html>

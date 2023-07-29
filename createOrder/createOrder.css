@@ -150,7 +150,7 @@ input:valid ~ label {
   visibility: hidden;
 }
 .custom-file-input::before {
-  content: "Tải file để thêm mới";
+  content: "Chọn file để thêm mới";
   color: black;
   display: inline-block;
   background: -webkit-linear-gradient(top, #f9f9f9, orange);
